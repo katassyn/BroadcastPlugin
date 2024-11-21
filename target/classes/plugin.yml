@@ -1,0 +1,14 @@
+name: BroadcastPlugin
+version: '1.0-SNAPSHOT'
+main: com.maks.broadcastplugin.BroadcastPlugin
+api-version: '1.20'
+commands:
+  broadcast:
+    description: Reloads the broadcast plugin configuration.
+    usage: /broadcast reload
+    permission: broadcast.reload
+    permission-message: You do not have permission to execute this command!
+permissions:
+  broadcast.reload:
+    description: Allows reloading the broadcast configuration.
+    default: op
