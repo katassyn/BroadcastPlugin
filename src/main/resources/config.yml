@@ -1,7 +1,58 @@
-messages:
-  - "§bJoin our Discord community!\n§fStay updated with server development plans and announcements.\n§eLink: §ahttps://discord.gg/W6NuFsqM"
-  - "§6Use §e/whodoq §6to check who is currently occupying a dungeon on a specific difficulty level!\n§fThis command shows the dungeon name, mode (difficulty), and the player or party currently using it.\n§7Stay informed and find your next challenge!"
-  - "§6Curious about the top players? Use §e/top §6to see the leaderboard!\n§fThis command displays the list of the top 10 players with the highest levels.\n§7Compete and climb the ranks to become the best!"
-  - "§6Want to team up? Use §e/party §6to create or join a party (up to 3 players).\n§fParameters:\n - §e/party invite [player] §7to invite a player.\n - §e/party join [player] §7to join their party.\n - §e/party leave §7to leave your current party.\n§fEarn extra rewards!\n - §7If a party member kills a mob within 25 blocks, you gain an additional §a30% EXP§7 for that mob!"
-  - "§cSee someone cheating or find a bug?\n§fPlease report cheaters and any bugs you find to the server administrators.\n§6Your help keeps the server fair and enjoyable for everyone!\n§7Thank you for supporting our community!"
-interval: 5 # czas w minutach między wiadomościami
+# BroadcastPlugin Configuration
+
+# Debug mode - set to true to enable additional logging
+debug: false
+
+# Categories settings
+categories:
+  # Enable message categories
+  enabled: true
+
+  # Directory where category configuration files are stored
+  # Each file in this directory will be loaded as a separate message category
+  directory: "categories"
+
+  # Default settings for categories (used if not specified in the category file)
+  defaults:
+    # Interval between messages in minutes
+    interval: 5
+
+    # Appearance settings
+    appearance:
+      # Separator line displayed before and after messages
+      separator: "------------------------------"
+      # Enable clickable links in messages
+      enable_clickable_links: true
+
+    # Message order settings
+    order:
+      # Randomize message order instead of sequential
+      randomize_messages: false
+
+# Legacy broadcast settings (used if categories are disabled)
+# This is kept for backward compatibility
+broadcast:
+  # Interval between messages in minutes
+  interval: 5
+
+  # Appearance settings
+  appearance:
+    # Separator line displayed before and after messages
+    separator: "------------------------------"
+    # Enable clickable links in messages
+    enable_clickable_links: true
+
+  # Message order settings
+  order:
+    # Randomize message order instead of sequential
+    randomize_messages: false
+
+  # Messages to broadcast
+  # You can use color codes with § symbol
+  # Use \n for new lines
+  messages:
+    - "§bJoin our Discord community!\n§fStay updated with server development plans and announcements.\n§eLink: §ahttps://discord.gg/W6NuFsqM"
+    - "§6Use §e/whodoq §6to check who is currently occupying a dungeon on a specific difficulty level!\n§fThis command shows the dungeon name, mode (difficulty), and the player or party currently using it.\n§7Stay informed and find your next challenge!"
+    - "§6Curious about the top players? Use §e/top §6to see the leaderboard!\n§fThis command displays the list of the top 10 players with the highest levels.\n§7Compete and climb the ranks to become the best!"
+    - "§6Want to team up? Use §e/party §6to create or join a party (up to 3 players).\n§fParameters:\n - §e/party invite [player] §7to invite a player.\n - §e/party join [player] §7to join their party.\n - §e/party leave §7to leave your current party.\n§fEarn extra rewards!\n - §7If a party member kills a mob within 25 blocks, you gain an additional §a30% EXP§7 for that mob!"
+    - "§cSee someone cheating or find a bug?\n§fPlease report cheaters and any bugs you find to the server administrators.\n§6Your help keeps the server fair and enjoyable for everyone!\n§7Thank you for supporting our community!"

@@ -1,0 +1,24 @@
+# General category configuration
+# This category contains general server announcements
+
+# Interval between messages in minutes
+interval: 5
+
+# Appearance settings
+appearance:
+  # Separator line displayed before and after messages
+  separator: "------------------------------"
+  # Enable clickable links in messages
+  enable_clickable_links: true
+
+# Message order settings
+order:
+  # Randomize message order instead of sequential
+  randomize_messages: false
+
+# Messages to broadcast
+# You can use color codes with § symbol
+# Use \n for new lines
+messages:
+  - "§bJoin our Discord community!\n§fStay updated with server development plans and announcements.\n§eLink: §ahttps://discord.gg/W6NuFsqM"
+  - "§cSee someone cheating or find a bug?\n§fPlease report cheaters and any bugs you find to the server administrators.\n§6Your help keeps the server fair and enjoyable for everyone!\n§7Thank you for supporting our community!"

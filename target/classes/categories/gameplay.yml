@@ -1,0 +1,25 @@
+# Gameplay category configuration
+# This category contains gameplay tips and information
+
+# Interval between messages in minutes
+interval: 10
+
+# Appearance settings
+appearance:
+  # Separator line displayed before and after messages
+  separator: "=== GAMEPLAY TIP ==="
+  # Enable clickable links in messages
+  enable_clickable_links: true
+
+# Message order settings
+order:
+  # Randomize message order instead of sequential
+  randomize_messages: true
+
+# Messages to broadcast
+# You can use color codes with § symbol
+# Use \n for new lines
+messages:
+  - "§6Use §e/whodoq §6to check who is currently occupying a dungeon on a specific difficulty level!\n§fThis command shows the dungeon name, mode (difficulty), and the player or party currently using it.\n§7Stay informed and find your next challenge!"
+  - "§6Curious about the top players? Use §e/top §6to see the leaderboard!\n§fThis command displays the list of the top 10 players with the highest levels.\n§7Compete and climb the ranks to become the best!"
+  - "§6Want to team up? Use §e/party §6to create or join a party (up to 3 players).\n§fParameters:\n - §e/party invite [player] §7to invite a player.\n - §e/party join [player] §7to join their party.\n - §e/party leave §7to leave your current party.\n§fEarn extra rewards!\n - §7If a party member kills a mob within 25 blocks, you gain an additional §a30% EXP§7 for that mob!"

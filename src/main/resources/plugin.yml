@@ -2,13 +2,24 @@ name: BroadcastPlugin
 version: '${project.version}'
 main: com.maks.broadcastplugin.BroadcastPlugin
 api-version: '1.20'
+description: A plugin for broadcasting scheduled messages with clickable links
+authors: [maks]
 commands:
   broadcast:
-    description: Reloads the broadcast plugin configuration.
-    usage: /broadcast reload
-    permission: broadcast.reload
+    description: Main command for the broadcast plugin
+    usage: |
+      /broadcast reload - Reloads the configuration
+      /broadcast debug - Shows debug information
+      /broadcast help - Shows help information
+    permission: broadcast.use
     permission-message: You do not have permission to execute this command!
 permissions:
+  broadcast.use:
+    description: Allows using the broadcast command
+    default: true
   broadcast.reload:
-    description: Allows reloading the broadcast configuration.
+    description: Allows reloading the broadcast configuration
+    default: op
+  broadcast.debug:
+    description: Allows viewing debug information
     default: op
