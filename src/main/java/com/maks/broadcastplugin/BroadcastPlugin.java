@@ -250,6 +250,17 @@ public class BroadcastPlugin extends JavaPlugin {
             return;
         }
 
+        // Initialize messageManager if it's null (this can happen when switching from category mode to legacy mode)
+        if (messageManager == null) {
+            getLogger().info("Initializing message manager for legacy mode");
+            messageManager = new MessageManager(this, configManager.getMessages());
+
+            // Update the command manager with the new message manager
+            if (commandManager != null) {
+                commandManager.updateMessageManager(messageManager);
+            }
+        }
+
         // Set up a repeating task using Bukkit's scheduler
         // This creates a task that runs at fixed intervals
         broadcastTask = Bukkit.getScheduler().runTaskTimer(

@@ -19,7 +19,7 @@ BroadcastPlugin is a powerful and flexible Minecraft server plugin that automati
 
 ## Installation
 
-1. Download the latest version of BroadcastPlugin from the [releases page](https://github.com/yourusername/BroadcastPlugin/releases)
+1. Download the latest version of BroadcastPlugin
 2. Place the JAR file in your server's `plugins` directory
 3. Restart your server or use a plugin manager to load the plugin
 4. The plugin will generate default configuration files in the `plugins/BroadcastPlugin` directory
@@ -111,7 +111,7 @@ For more detailed information, please refer to:
 If you encounter any issues or have questions, please:
 
 1. Check the [User Guide](docs/USER_GUIDE.md) for help with common problems
-2. Submit an issue on our [GitHub repository](https://github.com/yourusername/BroadcastPlugin/issues)
+2. Submit an issue on the GitHub repository if available
 
 ## License
 

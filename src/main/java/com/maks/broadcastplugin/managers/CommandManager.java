@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender;
 public class CommandManager implements CommandExecutor {
     private final BroadcastPlugin plugin;
     private final ConfigManager configManager;
-    private final MessageManager messageManager;
+    private MessageManager messageManager;
 
     /**
      * Constructs a new CommandManager.
@@ -99,6 +99,8 @@ public class CommandManager implements CommandExecutor {
                 }
             } else {
                 // If categories are disabled, update the legacy message manager
+                // Note: messageManager might be null if we're switching from category mode to legacy mode
+                // The BroadcastPlugin will initialize it in startLegacyBroadcasting() if needed
                 if (messageManager != null) {
                     messageManager.setMessages(configManager.getMessages());
                 }
@@ -196,5 +198,15 @@ public class CommandManager implements CommandExecutor {
         sender.sendMessage(ChatColor.YELLOW + "/broadcast debug" + ChatColor.GRAY + " - Shows debug information");
         sender.sendMessage(ChatColor.YELLOW + "/broadcast help" + ChatColor.GRAY + " - Shows this help message");
         return true;
+    }
+
+    /**
+     * Updates the message manager reference.
+     * This is used when the message manager is initialized or re-initialized after the CommandManager is created.
+     *
+     * @param messageManager The new message manager
+     */
+    public void updateMessageManager(MessageManager messageManager) {
+        this.messageManager = messageManager;
     }
 }
